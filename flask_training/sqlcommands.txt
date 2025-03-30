@@ -1,0 +1,57 @@
+PostgreSQl
+
+D-1:
+create database student_management;
+
+create table students (
+ student_id serial primary key,
+ first_name varchar(50) not null,
+ last_name varchar(50) not null,
+ age int,
+ gender varchar(5),
+ email varchar(255) unique
+);
+
+
+create table courses (
+  course_id serial primary key,
+  course_name varchar(100) not null,
+  department_id int references departments (department_id) on delete cascade,
+  credits int not null
+);
+
+create table enrollments (
+  enrollment_id serial primary key,
+  student_id int references students (student_id) on delete cascade,
+  course_id int references courses (course_id) ON delete cascade,
+  grade varchar(2)
+);
+
+create table departments (
+  DEPARTMENT_ID serial primary key,
+  department_name varchar(100) not null
+);
+
+insert into students 
+(first_name, last_name, age, gender, email)
+VALUES('Ram', 'Thapa', 16, 'Male', 'ramthapa@gmail.com'),
+('Shyam', 'Shrestha', 17, 'Male', 'shyamstha@gmail.com'),
+('Sita', 'Thapa', 18, 'Fmale', 'sitathapa@gmail.com');
+
+insert into courses 
+(course_name, department_id, credits )
+VALUES('Physics', 1, 160),
+('Chemistry', 2, 90),
+('CS', 3, 108);
+
+insert into enrollments
+(student_id, course_id, grade )
+VALUES(1, 1, 'A'),
+(2, 2, 'C'),
+(3, 3, 'B');
+
+insert into departments
+(department_name)
+VALUES('Physics'),
+('Chemistry'),
+('CS');
