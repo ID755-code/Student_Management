@@ -55,3 +55,7 @@ insert into departments
 VALUES('Physics'),
 ('Chemistry'),
 ('CS');
+
+update students set first_name = 'Hari' where student_id = 1;
+
+drop table students;
