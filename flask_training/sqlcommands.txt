@@ -1,10 +1,10 @@
-PostgreSQl
+PostgreSQl (Different from MySQL) [Mostly same]
 
 D-1:
 create database student_management;
 
 create table students (
- student_id serial primary key,
+ student_id serial primary key, // serial === auto_increment (no need for int declaration)
  first_name varchar(50) not null,
  last_name varchar(50) not null,
  age int,
