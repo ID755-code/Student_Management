@@ -22,16 +22,15 @@ def create_tables():
     conn=db_connection()
     cursor=conn.cursor()
     cursor.execute("""
-                   CREATE TABLE IF NOT EXISTS teacher(
-                       id SERIAL PRIMARY KEY,
-                       name VARCHAR(100) NOT NULL,
-                       age INT NOT NULL
-                   )
+                   CREATE TABLE IF NOT EXISTS enrollments(
+                    enrollment_id SERIAL PRIMARY KEY,
+                    teacher_id INT REFERENCES teacher (id) ON DELETE CASCADE,
+                    grade VARCHAR(2))
                    """)
     conn.commit()
     cursor.close()
     conn.close()
-    print("Tables created")
+    print("Table created")
     
 def insert_teacher(name, age):
     conn=db_connection()
@@ -62,4 +61,3 @@ def delete_teacher(id):
 
 if __name__=="__main__":
     create_tables()
-    delete_teacher(1)
