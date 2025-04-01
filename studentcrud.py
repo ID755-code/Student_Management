@@ -49,7 +49,7 @@ def create_table_courses():
     print("Table courses created")
 
 
-def create_table_students():
+def create_table_student():
     conn = db_connection()
     cursor = conn.cursor()
     cursor.execute("""
@@ -83,14 +83,32 @@ def create_table_enrollments():
     print("Table enrollments created")
     
     
-def insert_teacher(name, age):
+def insert_teacher(id, name, age):
     conn = db_connection()
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO teacher (name, age) VALUES (%s, %s) RETURNING id", (name, age))
+    cursor.execute("INSERT INTO teacher (id, name, age) VALUES (%s, %s, %s)", (id, name, age))
     conn.commit()
     cursor.close()
     conn.close()
-    print("Data Inserted")
+    print("Data Inserted to teacher table")
+    
+def insert_courses(course_id, course_name, credits, teacher_id):
+    conn = db_connection()
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO courses (course_id, course_name, credits, teacher_id) VALUES (%s, %s, %s, %s)", (course_id, course_name, credits, teacher_id))
+    conn.commit()
+    cursor.close()
+    conn.close()
+    print("Data Inserted table courses")
+    
+def insert_student(name, course_id, age):
+    conn = db_connection()
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO student (name, course_id, age) VALUES (%s, %s, %s)", (name,course_id, age))
+    conn.commit()
+    cursor.close()
+    conn.close()
+    print("Data Inserted to table student")
     
 def update_teacher(name, id):
     conn = db_connection()
@@ -111,6 +129,4 @@ def delete_teacher(id):
     print("Data Deleted")
 
 if __name__ == "__main__":
-    create_table_courses()
-    create_table_students()
-    create_table_enrollments()
+    insert_student('Pop', 1002, 18)
