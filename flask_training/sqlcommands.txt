@@ -71,3 +71,14 @@ python -m venv venv   //to create venv folder
 .\venv\Scripts\activate   //to initialize virtual environment of venv [Set-ExecutionPolicy Unrestricted -Scope Process] : If error 
 pip install psycopg  //Library for database interaction
 i-frame in html (study)
+
+After django-admin startproject projecy-name //start new project;new vitrtual environment
+After such, reinstall django in this new virtual environment as it is new.
+
+
+
+Then, py manage.py runserver
+After that, it will ask if you want to migrate, if yes do py manage.py migrate (Ctrl+C for if the command line disappears)
+manage.py create superuser, after creating admin(superuser), add username, password, email and,
+py manage.py runserver,
+go to the site and login
