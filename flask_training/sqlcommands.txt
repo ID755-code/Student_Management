@@ -1,4 +1,5 @@
 PostgreSQl (Different from MySQL) [Mostly same]
+----------------------------------------------------------------------------------------------------------------------
 
 D-1:
 create database student_management;
@@ -62,3 +63,6 @@ drop table students; //delete
 
 select * from enrollments where student_id = 2; // read [Should add Join but lazy]
 
+----------------------------------------------------------------------------------------------------------------------
+
+D-2:
