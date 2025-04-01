@@ -72,7 +72,7 @@ python -m venv venv   //to create venv folder
 pip install psycopg  //Library for database interaction
 i-frame in html (study)
 
-After django-admin startproject projecy-name //start new project;new vitrtual environment
+After django-admin startproject project-name //start new project;new vitrtual environment
 After such, reinstall django in this new virtual environment as it is new.
 
 
