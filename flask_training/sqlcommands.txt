@@ -66,3 +66,6 @@ select * from enrollments where student_id = 2; // read [Should add Join but laz
 ----------------------------------------------------------------------------------------------------------------------
 
 D-2:
+
+python -m venv venv   //to create venv folder
+.\venv\Scripts\activate   //to initialize virtual environment [Set-ExecutionPolicy Unrestricted -Scope Process] : If error
