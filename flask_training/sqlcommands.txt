@@ -60,5 +60,5 @@ update students set first_name = 'Hari' where student_id = 1; //update
 
 drop table students; //delete
 
-select * from enrollemnts where student_id = 2; // read [Should add Join but lazy]
+select * from enrollments where student_id = 2; // read [Should add Join but lazy]
 
