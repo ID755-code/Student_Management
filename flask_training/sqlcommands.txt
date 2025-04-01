@@ -68,5 +68,6 @@ select * from enrollments where student_id = 2; // read [Should add Join but laz
 D-2:
 
 python -m venv venv   //to create venv folder
-.\venv\Scripts\activate   //to initialize virtual environment [Set-ExecutionPolicy Unrestricted -Scope Process] : If error 
+.\venv\Scripts\activate   //to initialize virtual environment of venv [Set-ExecutionPolicy Unrestricted -Scope Process] : If error 
 pip install psycopg  //Library for database interaction
+i-frame in html (study)
