@@ -59,3 +59,6 @@ VALUES('Physics'),
 update students set first_name = 'Hari' where student_id = 1;
 
 drop table students;
+
+select * from enrollemnts where student_id = 2;
+
