@@ -110,6 +110,15 @@ def insert_student(name, course_id, age):
     conn.close()
     print("Data Inserted to table student")
     
+def insert_enrollments(enrollment_id, grade, student_id, course_id):
+    conn = db_connection()
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO enrollments (enrollment_id, grade, student_id, course_id) VALUES (%s, %s, %s, %s)", (enrollment_id, grade, student_id, course_id))
+    conn.commit()
+    cursor.close()
+    conn.close()
+    print("Data Inserted to enrollments")
+    
 def update_teacher(name, id):
     conn = db_connection()
     cursor = conn.cursor()
@@ -129,4 +138,4 @@ def delete_teacher(id):
     print("Data Deleted")
 
 if __name__ == "__main__":
-    insert_student('Pop', 1002, 18)
+    insert_enrollments(543, '12', 3, 1002)
