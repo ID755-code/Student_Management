@@ -115,4 +115,7 @@ MVC == Model View Controller (PhP)
 MVT == Model View Template (Django)
 
 
+Student.object.all() === All data of student instead of a certain one
 try to do view edit delete in that student mnagement system
+Try to do another one in the format of that management system
+writing you django app pt: 1-5 read
