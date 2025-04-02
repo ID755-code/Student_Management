@@ -1,4 +1,4 @@
-PostgreSQl (Different from MySQL) [Mostly same]
+PostgreSQl (Different from MySQL) [Mostly same]: supabase
 ----------------------------------------------------------------------------------------------------------------------
 
 D-1:
@@ -69,7 +69,7 @@ D-2:
 
 python -m venv venv   //to create venv folder
 .\venv\Scripts\activate   //to initialize virtual environment of venv [Set-ExecutionPolicy Unrestricted -Scope Process] : If error 
-pip install psycopg  //Library for database interaction
+pip install psycopg  //Library for database interaction, not required for flasktrain proejct specifically, only for studentcrud.py
 i-frame in html (study)
 
 After django-admin startproject project-name //start new project;new vitrtual environment
@@ -86,3 +86,6 @@ go to the site and login as admin
 --------------------------------------------------------------------------------------------------------------------------
 
 D-3:
+
+Decoupled Architecture: Separates frontend and backend (React) [Backend == API, node.js, django, etc]
+Coupled Architecture: Frontend and Backend on the same page of code; same process (PhP, D2-Python)
