@@ -79,7 +79,7 @@ After such, reinstall django in this new virtual environment as it is new.
 
 Then, py manage.py runserver
 After that, it will ask if you want to migrate, if yes do py manage.py migrate (Ctrl+C for if the command line disappears- The terminal is busy when the server is running, this terminates the server)
-manage.py create superuser, after creating admin(superuser), add username, password, email and,
+py manage.py createsuperuser, after creating admin(superuser), add username, password, email and,
 py manage.py runserver,
 go to the site and login as admin
 
