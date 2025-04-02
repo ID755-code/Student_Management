@@ -82,3 +82,7 @@ After that, it will ask if you want to migrate, if yes do py manage.py migrate (
 manage.py create superuser, after creating admin(superuser), add username, password, email and,
 py manage.py runserver,
 go to the site and login
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+D-3:
