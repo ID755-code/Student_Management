@@ -92,4 +92,10 @@ Coupled Architecture: Frontend and Backend on the same page of code; same proces
 ORM == Object-Relational Mapper (psycopg2 in this case)
 deativate == terminate the virtual environment; eats RAM space
 
-- Creation of new project studentinformation
+- Creation of new project student_management
+addition of py manage.py startapp student_id
+add it on applications.py
+make urls.py on the folder students but remove the admin stuff from urls.py
+
+in the root of the prject urls folder add ,include after django.urls line
+afterwards add a new path('students/',include("student.urls))
