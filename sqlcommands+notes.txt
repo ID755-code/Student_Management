@@ -105,3 +105,8 @@ added stuff on models.py
 run command py manage.py makemigrations [correct stuff in url] [imports all code into a file to prepare for migration]
 then, manage.py migrate aql migrate appname 0001
 then, py manage.py migrate 
+
+[-----Modelfields-study------------]
+
+then, on admin: from student.models import tablename
+admin.site.register(tablename), after filling in the data, it can be seen on the webpage
