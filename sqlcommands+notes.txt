@@ -89,3 +89,7 @@ D-3:
 
 Decoupled Architecture: Separates frontend and backend (React) [Backend == API, node.js, django, etc]
 Coupled Architecture: Frontend and Backend on the same page of code; same process (PhP, D2-Python)
+ORM == Object-Relational Mapper (psycopg2 in this case)
+deativate == terminate the virtual environment; eats RAM space
+
+- Creation of new project studentinformation
