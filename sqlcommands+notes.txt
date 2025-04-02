@@ -99,3 +99,9 @@ make urls.py on the folder students but remove the admin stuff from urls.py
 
 in the root of the prject urls folder add ,include after django.urls line
 afterwards add a new path('students/',include("student.urls))
+
+added stuff on models.py
+
+run command py manage.py makemigrations [correct stuff in url] [imports all code into a file to prepare for migration]
+then, manage.py migrate aql migrate appname 0001
+then, py manage.py migrate 
